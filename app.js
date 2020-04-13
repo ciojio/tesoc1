@@ -15,11 +15,13 @@ app.get('/',(req,res)=>{
 const PORT = 8080;
 // const HOST = '0.0.0.0';
 const HOST = 'localhost';
+const IP = '0.0.0.0';
 // const HOST = 'test.com';
 
 // const port=process.env.PORT || 80;
 // app.listen(PORT);
 
 
-app.listen(PORT,HOST);
+//app.listen(PORT,HOST);
+app.listen(PORT,IP);
 //console.log(`Running on http://${HOST}:${PORT}`);
