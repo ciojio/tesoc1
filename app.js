@@ -4,9 +4,13 @@ console.log("Hello World! \n");
 const app = express();
 //console.log(app);
 var http = require('http');
+const path = require('path');
+
 const server=http.createServer(app);
+
 app.get('/',(req,res)=>{
-    res.send('Hello ? my world');
+    res.sendFile(path.join(__dirname+'/index.html'));
+    //res.send('Hello ? my world');
 });
 const PORT = 8080;
 // const HOST = '0.0.0.0';
@@ -18,4 +22,4 @@ const HOST = 'localhost';
 
 
 app.listen(PORT,HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
+//console.log(`Running on http://${HOST}:${PORT}`);
